@@ -16,23 +16,23 @@ class FormProductosCustom(forms.ModelForm):
         }
 
 
-class FormCategoriasCustom(forms.ModelForm):
+# class FormCategoriasCustom(forms.ModelForm):
     # campos del modelo
-    class Meta:
-        model = Categorias
-        fields = ('titulo')
-        widgets = {
-            'descripcion': forms.TextInput(attrs={'class': 'estilo_descripcion'}),
-        }
+#    class Meta:
+#        model = Categorias
+#        fields = ('descripcion')
+#        widgets = {
+#            'descripcion': forms.TextInput(attrs={'class': 'estilo_descripcion'}),
+#        }
 
 
-class FormCarritoCustom(forms.ModelForm):
+# class FormCarritoCustom(forms.ModelForm):
     # campos del modelo
-    class Meta:
-        model = Carrito
-        fields = ('usuario', 'listaProductos', 'totalCarrito')
-        widgets = {
-            'usuario': forms.TextInput(attrs={'class': 'estilo_usuario'}),
-            'listaProductos': forms.TextInput(attrs={'class': 'estilo_listaProductos'}),
-            'totalCarrito': forms.TextInput(attrs={'class': 'estilo_totalCarrito'}),
-        }
+#    class Meta:
+#        model = Carrito
+#        fields = ('usuario', 'listaProductos', 'totalCarrito')
+#        widgets = {
+#            'usuario': forms.TextInput(attrs={'class': 'estilo_usuario'}),
+#            'listaProductos': forms.TextInput(attrs={'class': 'estilo_listaProductos'}),
+#            'totalCarrito': forms.TextInput(attrs={'class': 'estilo_totalCarrito'}),
+#        }
