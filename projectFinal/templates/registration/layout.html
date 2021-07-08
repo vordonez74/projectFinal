@@ -23,15 +23,6 @@
                 </div>
                 <div class="col-lg-6 text-center">
 
-                    {% if user.is_authenticated %}
-                    Usuario: {{ user.get_username }}
-                    <a href="{% url 'logout'%}?next={{request.path}}">logout</a>
-                    {% else %}
-                    <a href="{% url 'login'%}?next={{request.path}}">login</a>
-                    {% endif %}
-                    <a href="#">registro</a>
-                    <a href="#">Carrito</a>
-
                 </div>
             </div>
         </header>
@@ -57,7 +48,7 @@
                             <a class="nav-link" href="#">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'producto_alta' %}">Nuevo producto</a>
+                            <a class="nav-link" href="#">Nuevo producto</a>
                         </li>
                     </ul>
                     <form class="d-flex" action="{% url 'buscar' %}" method="GET">
@@ -68,10 +59,9 @@
                 </div>
             </div>
         </nav>
-        {% if user.is_authenticated %}
-        {% block body %}
+        {% block content %}
         {% endblock %}
-        {% endif %}
+
         <footer>
             <h4>JAGUARETE KAA S.A.</h4>
             <h5>Victor Alejandro Ordoñez</h5>

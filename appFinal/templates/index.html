@@ -1,10 +1,11 @@
 {% extends 'layout.html' %}
+{% load static %}
 
 {% block body %}
 <section class="container">
     <div class="row">
         <div class="card col-sm" style="width: 18rem;">
-            <img src="zapatillas2.jpg" class="card-img-top" alt="...">
+            <img src="{% static 'zapatillas1.jpg' %}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Zapatilla 1</h5>
                 <p class="card-text">$ 16.399,00</p>
@@ -13,7 +14,7 @@
             </div>
         </div>
         <div class="card col-sm" style="width: 18rem;">
-            <img src="zapatillas2.jpg" class="card-img-top" alt="...">
+            <img src="{% static 'zapatillas2.jpg' %}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Zapatilla 2</h5>
                 <p class="card-text">$ 9.399,00</p>
@@ -22,7 +23,7 @@
             </div>
         </div>
         <div class="card col-sm" style="width: 18rem;">
-            <img src="zapatillas3.jpg" class="card-img-top" alt="...">
+            <img src="{% static 'zapatillas3.jpg' %}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Zapatilla 2</h5>
                 <p class="card-text">$ 2.399,00</p>
@@ -34,9 +35,12 @@
 </section>
 <section>
     <h2>Mas productos</h2>
-    <p>-Titulo del producto 5: Descripción...</p>
-    <p>-Titulo del producto 5: Descripción...</p>
-    <p>-Titulo del producto 5: Descripción...</p>
-    <p>-Titulo del producto 5: Descripción...</p>
+    <ul>
+        {% for un_producto in lista_productos %}
+        <li>
+            <a href="" class="text-uppercase">#{{un_producto.id}} {{ un_producto.titulo }}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </section>
 {% endblock %}

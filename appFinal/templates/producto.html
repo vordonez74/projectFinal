@@ -1,5 +1,10 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<h2>PRODUCTO</h2>
+<h2>PRODUCTOS</h2>
+<ol>
+    {% for un_producto in lista_productos %}
+    <li> {{un_producto}} </li>
+    {% endfor %}
+</ol>
 {% endblock %}
